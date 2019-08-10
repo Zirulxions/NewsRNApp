@@ -22,57 +22,46 @@ export default function HomeScreen() {
           <Image
             source={
               __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
+                ? require('../assets/images/RNExpoCli.png')
+                : require('../assets/images/RNLogo.png')
             }
             style={styles.welcomeImage}
           />
         </View>
 
         <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
 
-          <Text style={styles.getStartedText}>Get started by opening</Text>
+          <Text style={styles.getStartedText}>News API is a simple HTTP REST API for searching and retrieving live articles from all over the web. It can help you answer questions like:</Text>
 
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
+            <MonoText>☼ What top stories is the NY Times running right now?</MonoText>
+            <MonoText>☼ What new articles were published about the next iPhone today?</MonoText>
+            <MonoText>☼ Has my company or product been mentioned or reviewed by any blogs recently?</MonoText>
           </View>
-
-          <Text style={styles.getStartedText}>
-            Change this text and your app will automatically reload.
-          </Text>
         </View>
 
         <View style={styles.helpContainer}>
+          <Text style={styles.getStartedText}>
+            For more information visit:
+          </Text>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
             <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
+              API DOCUMENTATION
             </Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
-      </View>
     </View>
   );
 }
 
 HomeScreen.navigationOptions = {
-  header: null,
+  title: 'API Description',
+  //header: null,
 };
 
+/*
 function DevelopmentModeNotice() {
   if (__DEV__) {
     const learnMoreButton = (
@@ -101,10 +90,11 @@ function handleLearnMorePress() {
     'https://docs.expo.io/versions/latest/workflow/development-mode/'
   );
 }
+*/
 
 function handleHelpPress() {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes'
+    'https://newsapi.org/docs'
   );
 }
 
