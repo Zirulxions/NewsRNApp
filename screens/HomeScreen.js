@@ -28,16 +28,19 @@ export default function HomeScreen() {
             style={styles.welcomeImage}
           />
         </View>
-
+ 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles.getStartedText}>News API is a simple HTTP REST API for searching and retrieving live articles from all over the web. It can help you answer questions like:</Text>
+          <Text style={styles.getStartedText}>News API is a simple and easy-to-use API that returns JSON metadata for headlines and articles live all over the web right now.</Text>
 
-          <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>☼ What top stories is the NY Times running right now?</MonoText>
-            <MonoText>☼ What new articles were published about the next iPhone today?</MonoText>
-            <MonoText>☼ Has my company or product been mentioned or reviewed by any blogs recently?</MonoText>
+          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            <MonoText>☼ FREAKING FAST: Everything is asynchronously cached for a super-fast response.</MonoText>
+          </View>
+          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            <MonoText>☼ FREE FOR DEVELOPERS: Jump right in if you're in development or open source.</MonoText>
+          </View>
+          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            <MonoText>☼ EASY INTEGRATION: Get JSON results with simple GET HTTP requests</MonoText>
           </View>
         </View>
 
