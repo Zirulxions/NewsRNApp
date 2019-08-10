@@ -18,6 +18,7 @@ export default function HomeScreen() {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
+
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -28,11 +29,9 @@ export default function HomeScreen() {
             style={styles.welcomeImage}
           />
         </View>
- 
+
         <View style={styles.getStartedContainer}>
-
           <Text style={styles.getStartedText}>News API is a simple and easy-to-use API that returns JSON metadata for headlines and articles live all over the web right now.</Text>
-
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
             <MonoText>☼ FREAKING FAST: Everything is asynchronously cached for a super-fast response.</MonoText>
           </View>
@@ -54,6 +53,7 @@ export default function HomeScreen() {
             </Text>
           </TouchableOpacity>
         </View>
+
       </ScrollView>
     </View>
   );

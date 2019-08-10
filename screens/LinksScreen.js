@@ -5,6 +5,8 @@ import { ScrollView, FlatList } from 'react-native';
 import { getNews } from './src/news';
 import Article from './src/components/Article';
 
+var page = 0;
+
 export default class LinksScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +19,8 @@ export default class LinksScreen extends React.Component {
   }
 
   fetchNews() {
-    getNews()
+    page++;
+    getNews(page)
       .then(articles => this.setState({ articles, refreshing: false }))
       .catch(() => this.setState({ refreshing: false }));
   }
@@ -39,6 +42,7 @@ export default class LinksScreen extends React.Component {
         keyExtractor={item => item.url}
         refreshing={this.state.refreshing}
         onRefresh={this.handleRefresh.bind(this)}
+        onEndReached = { this.fetchNews }
       />
     );
   }
