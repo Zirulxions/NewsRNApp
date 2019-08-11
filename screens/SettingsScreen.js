@@ -16,23 +16,29 @@ import { MonoText } from '../components/StyledText';
 
 export default function SettingsScreen() {
   return(
-    <View>
+    <View style={styles.container}>
       <ScrollView>
 
         <View>
-          <Text style={styles.autorText}>Author Nickname: Zirulxions</Text>
-          <Text style={styles.autorTextReduced}>Author Name: Javier Delgado</Text>
-          <Text style={styles.autorTextReduced}>Author Email: javierzirulxions@gmail.com</Text>
-          <Text style={styles.autorTextReduced}>Author Country: Venezuela</Text>
+          <MonoText style={styles.autorText}>Author Nickname: Zirulxions</MonoText>
+        </View>
+        <View>
+          <MonoText style={styles.autorTextReduced}>Author Name: Javier Delgado</MonoText>
+        </View>
+        <View>
+          <MonoText style={styles.autorTextReduced}>Author Email: javierzirulxions@gmail.com</MonoText>
+        </View>
+        <View>
+          <MonoText style={styles.autorTextReduced}>Author Country: Venezuela</MonoText>
         </View>
 
         <View style={styles.helpContainer}>
           <Text style={styles.getStartedText}>
-            Author Github:
+            Author Github (Zirulxions):
           </Text>
           <TouchableOpacity onPress={goToGithub} style={styles.helpLink}>
             <Text style={styles.linkText}>
-              Zirulxions Github
+              https://www.gitbub.com/Zirulxions (Click Me!)
             </Text>
           </TouchableOpacity>
         </View>
@@ -62,19 +68,27 @@ function goToGithub(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#2e78b7',
   },
   autorText: {
     fontSize: 24,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'left',
+    color: '#ffffff',
+    lineHeight: 27,
+    textAlign: 'center',
+    borderRadius: 3,
+    paddingHorizontal: 4,
+    marginTop: 10,
+    marginBottom: 10,
   },
   autorTextReduced: {
-    fontSize: 24,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 17,
-    textAlign: 'left',
+    fontSize: 20,
+    color: '#ffffff',
+    lineHeight: 23,
+    textAlign: 'center',
+    borderRadius: 3,
+    paddingHorizontal: 4,
+    marginTop: 10,
+    marginBottom: 10,
   },
   helpContainer: {
     marginTop: 15,
@@ -82,11 +96,11 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: '#ffffff',
   },
   getStartedText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: '#ffffff',
     lineHeight: 24,
     textAlign: 'center',
   },
