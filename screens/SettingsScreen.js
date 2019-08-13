@@ -19,6 +19,15 @@ export default function SettingsScreen() {
     <View style={styles.container}>
       <ScrollView>
 
+        <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          <TouchableOpacity onPress={alertFunction}>
+            <Image
+              source={require('../assets/images/iluminati.gif')}
+              style={styles.centerImage}
+            />
+          </TouchableOpacity>
+        </View>
+
         <View>
           <MonoText style={styles.autorText}>Author Nickname: Zirulxions</MonoText>
         </View>
@@ -55,6 +64,8 @@ export default function SettingsScreen() {
 return <ExpoConfigView />;
 */
 
+var number = 0;
+
 SettingsScreen.navigationOptions = {
   title: 'Developer information',
 };
@@ -63,6 +74,45 @@ function goToGithub(){
   WebBrowser.openBrowserAsync(
     'https://www.github.com/Zirulxions'
   );
+}
+
+function alertFunction(){
+  number = Math.floor(Math.random() * 10) + 1;
+  switch(number){
+    case 1:
+      alert('Iluminati is Here... Watch Out');
+      break;
+    case 2:
+      alert('20 Points for me..!');
+      break;
+    case 3:
+      alert('If you see this, you are about to love someone');
+      break;
+    case 4:
+      alert('IM WATCHING YOU');
+      break;
+    case 5:
+      alert('OVER BY MY SELF!');
+      break;
+    case 6:
+      alert('I wanna be your hero');
+      break;
+    case 7:
+      alert('Im watching: Dragon Ball Z: Battle of the Gods');
+      break;
+    case 8:
+      alert('Dont click me, it hurts');
+      break;
+    case 9:
+      alert('I am... Lord... Voldemort');
+      break;
+    case 10:
+      alert('I hate Kandi Kruch Zaga');
+      break;
+    default:
+      alert('WTF ARE YOU DOING !? YOU SHOULD NOT BE ABLE TO SEE THIS!');
+      break;
+  };
 }
 
 const styles = StyleSheet.create({
@@ -103,5 +153,11 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     lineHeight: 24,
     textAlign: 'center',
+  },
+  centerImage: {
+    width: 150,
+    height: 150,
+    resizeMode: 'contain',
+    marginTop: 3,
   },
 });
