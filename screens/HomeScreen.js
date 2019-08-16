@@ -60,7 +60,7 @@ export default function HomeScreen() {
 }
 
 HomeScreen.navigationOptions = {
-  title: 'API Description',
+  title: '♣ API Description ♣',
   //header: null,
 };
 
@@ -135,9 +135,11 @@ const styles = StyleSheet.create({
   homeScreenFilename: {
     marginVertical: 7,
   },
+  /*
   codeHighlightText: {
     color: 'rgba(96,100,109, 0.8)',
   },
+  */
   codeHighlightContainer: {
     backgroundColor: 'rgba(0,0,0,0.05)',
     borderRadius: 3,
@@ -149,6 +151,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
+  /*
   tabBarInfoContainer: {
     position: 'absolute',
     bottom: 0,
@@ -177,6 +180,7 @@ const styles = StyleSheet.create({
   navigationFilename: {
     marginTop: 5,
   },
+  */
   helpContainer: {
     marginTop: 15,
     alignItems: 'center',
@@ -187,5 +191,6 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+    textDecorationLine: 'underline',
   },
 });

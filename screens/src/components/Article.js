@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Linking, TouchableNativeFeedback } from 'react-native';
 import { Text, Button, Card, Divider } from 'react-native-elements';
 import moment from 'moment';
- 
+import * as WebBrowser from 'expo-web-browser';
+
 export default class Article extends React.Component {
   render() {
     const {
@@ -15,13 +16,13 @@ export default class Article extends React.Component {
     } = this.props.article;
     const { noteStyle, featuredTitleStyle } = styles;
     const time = moment(publishedAt || moment.now()).fromNow();
-    const defaultImg =
-      'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
+    const defaultImg = 'https://picsum.photos/200/300';
+      //'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
 
     return (
       <TouchableNativeFeedback
         useForeground
-        onPress={() => Linking.openURL(url)}
+        onPress={() => openLink(url)}//Linking.openURL(url)}
       >
         <Card
           featuredTitle={title}
@@ -45,6 +46,10 @@ export default class Article extends React.Component {
     );
   }
 }
+
+function openLink(url){
+  WebBrowser.openBrowserAsync(url);
+};
 
 const styles = {
   noteStyle: {

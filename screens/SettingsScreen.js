@@ -67,7 +67,19 @@ return <ExpoConfigView />;
 var number = 0;
 
 SettingsScreen.navigationOptions = {
-  title: 'Developer information',
+  title: '♀ Developer ♀',
+  //headerBackTitle: null,
+  headerTitleStyle: {
+    //alignSelf: 'center',
+    //textAlign: 'center',
+    //justifyContent: 'center',
+    fontWeight: 'bold',
+    color: '#ffffff',
+    width: '100%',
+  },
+  headerStyle: {
+    backgroundColor: '#083366',
+  },
 };
 
 function goToGithub(){
@@ -146,7 +158,8 @@ const styles = StyleSheet.create({
   },
   linkText: {
     fontSize: 14,
-    color: '#ffffff',
+    color: '#f8e71c',
+    textDecorationLine: 'underline',
   },
   getStartedText: {
     fontSize: 17,
