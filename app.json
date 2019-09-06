@@ -24,7 +24,11 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.zirulxions.reactnativenewsapi",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.zirulxions.reactnativenewsapi" 
     },
     "description": ""
   }
